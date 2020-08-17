@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<iframe src="https://open.spotify.com/embed-podcast/episode/2SCMfVV9POZMd9UAQn55GI" width="100%" height="232"
+    frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<div>
+    <div class=container>
+        <h2>Ep.{{episode.get("_id")}}: {{ episode.get('guest') }} {{ episode.get('title') }}</h2>
+        {{ episode.get('text')|safe }}
+
+    </div>
+</div>
+{% endblock %}
+{% block side %}
+<div class='container'>
+    {% for quote in quotes %}
+    <div>
+        {{ quote.get("quote") }}
+    </div>
+    <!-- <div class='toast' data-autohide='false'> -->
+    <!-- <div id='toast-body'> -->
+    <!-- {{ quote.get('quote') }} -->
+    <!-- <button></button> -->
+    <!-- </div> -->
+</div>
+
+{% endfor %}
+</div>
+{% endblock %}

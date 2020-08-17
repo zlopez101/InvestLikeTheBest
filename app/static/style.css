@@ -1,0 +1,19 @@
+/* body {
+    background-image: url("bg2.jpg");
+    background-origin: content-box;
+    background-position: center;
+} */
+
+
+.content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+
+.stayfixed {
+    position: fixed;
+    right: 0;
+}
