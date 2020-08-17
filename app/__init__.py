@@ -1,12 +1,15 @@
 from flask import Flask, render_template, url_for, jsonify, redirect
 from flask_pymongo import PyMongo
 import re
-
+import os
 
 app = Flask(__name__)
-app.config[
-    "MONGO_URI"
-] = "mongodb+srv://Zach:X.oEyXBdG3C62@cluster0.b4an6.mongodb.net/InvestLikeTheBest?retryWrites=true&w=majority"
+password = os.environ.get("MONGO_DB")
+app.config["MONGO_URI"] = (
+    "mongodb+srv://Zach:"
+    + password
+    + "@cluster0.b4an6.mongodb.net/InvestLikeTheBest?retryWrites=true&w=majority"
+)
 mongo = PyMongo(app)
 
 
