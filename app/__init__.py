@@ -52,3 +52,14 @@ def create_new_episode(episode_id, guest, title):
     mongo.db.Podcasts.insert_one(episode)
     return redirect(url_for("home"))
 
+
+@app.route(
+    "/post/create-new-summary/<int:episode_id><summary>", methods=["GET", "POST"]
+)
+def summary(episode_id, summary):
+    """
+
+    """
+    mongo.db.Summary.insert_one({"episode_id": episode_id, "text": summary})
+    return "success"
+

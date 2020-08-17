@@ -3,7 +3,9 @@
     background-origin: content-box;
     background-position: center;
 } */
-
+body {
+    background: content-box radial-gradient(crimson, skyblue);
+}
 
 .content-section {
     background: #ffffff;
@@ -16,4 +18,8 @@
 .stayfixed {
     position: fixed;
     right: 0;
+}
+
+.quote {
+    text-decoration-style: wavy;
 }

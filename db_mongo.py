@@ -71,4 +71,4 @@ quotes = [
 db = create()
 # podcasts["Quotes"].insert_many(quotes)
 db.Quotes.find_one({"episode": 184})
-
+db.Quotes.insert()

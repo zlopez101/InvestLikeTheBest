@@ -13,16 +13,9 @@
 {% block side %}
 <div class='container'>
     {% for quote in quotes %}
-    <div>
-        {{ quote.get("quote") }}
+    <div class="content-section quote">
+        "{{ quote.get("quote") }}"
     </div>
-    <!-- <div class='toast' data-autohide='false'> -->
-    <!-- <div id='toast-body'> -->
-    <!-- {{ quote.get('quote') }} -->
-    <!-- <button></button> -->
-    <!-- </div> -->
-</div>
-
-{% endfor %}
+    {% endfor %}
 </div>
 {% endblock %}
